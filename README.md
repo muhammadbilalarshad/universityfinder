@@ -1,2 +1,2 @@
 # universityfinder
-Find Universities from around the world
+iOS app to find universities from around the world.
