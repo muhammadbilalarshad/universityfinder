@@ -82,5 +82,25 @@ extension UniversityListViewController: UITableViewDelegate, UITableViewDataSour
     func didTapWebsite(url: URL) {
         UIApplication.shared.open(url)
     }
+    
+    func didTapShare(universityViewModel: UniversityViewModel) {
+        let infoTobeShared = universityViewModel.name + "\n" + universityViewModel.domains + "\n" + universityViewModel.countryCode + "\n" + universityViewModel.webPages + "\n" + universityViewModel.stateProvince + "\n"
+        var activityVC = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+
+            activityVC.excludedActivityTypes = [
+                UIActivity.ActivityType.postToWeibo,
+                UIActivity.ActivityType.print,
+                UIActivity.ActivityType.copyToPasteboard,
+                UIActivity.ActivityType.assignToContact,
+                UIActivity.ActivityType.saveToCameraRoll,
+                UIActivity.ActivityType.addToReadingList,
+                UIActivity.ActivityType.postToFlickr,
+                UIActivity.ActivityType.postToVimeo,
+                UIActivity.ActivityType.postToTencentWeibo,
+                UIActivity.ActivityType.airDrop
+            ]
+
+        self.present(activityVC, animated: true, completion: nil)
+    }
 }
 

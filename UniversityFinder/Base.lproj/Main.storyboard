@@ -200,11 +200,21 @@
                                                         <constraint firstItem="ULF-fA-3OJ" firstAttribute="leading" secondItem="s0u-Zu-pTN" secondAttribute="leading" id="sAs-wk-EeZ"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1G-dt-6xD">
+                                                    <rect key="frame" x="309" y="4.6666666666666679" width="68" height="43"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                                    <connections>
+                                                        <action selector="shareBtnTapped:" destination="wrd-GC-s0C" eventType="touchUpInside" id="jVC-AQ-gCd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="v1G-dt-6xD" firstAttribute="centerY" secondItem="M85-Fu-kbh" secondAttribute="centerY" id="5KW-lq-YIU"/>
                                                 <constraint firstAttribute="bottom" secondItem="4Dv-rd-A07" secondAttribute="bottom" id="Am1-TZ-kl1"/>
                                                 <constraint firstItem="M85-Fu-kbh" firstAttribute="centerY" secondItem="glq-Dz-WPv" secondAttribute="centerY" id="JLe-2M-ngH"/>
                                                 <constraint firstItem="4Dv-rd-A07" firstAttribute="leading" secondItem="hxj-gM-wmX" secondAttribute="leading" id="OFe-J3-JLR"/>
+                                                <constraint firstAttribute="trailing" secondItem="v1G-dt-6xD" secondAttribute="trailing" constant="16" id="SEf-m9-GUT"/>
                                                 <constraint firstItem="glq-Dz-WPv" firstAttribute="leading" secondItem="hxj-gM-wmX" secondAttribute="leading" constant="8" id="cxW-zc-1mn"/>
                                                 <constraint firstItem="glq-Dz-WPv" firstAttribute="top" secondItem="hxj-gM-wmX" secondAttribute="top" constant="8" id="eZX-Pj-a5B"/>
                                                 <constraint firstItem="4Dv-rd-A07" firstAttribute="top" secondItem="glq-Dz-WPv" secondAttribute="bottom" constant="8" id="kto-q9-dTN"/>
@@ -223,6 +233,7 @@
                                             <outlet property="expandButton" destination="glq-Dz-WPv" id="AtZ-Io-JJz"/>
                                             <outlet property="mapView" destination="ZJw-an-Kao" id="1lc-oR-iK5"/>
                                             <outlet property="nameLabel" destination="M85-Fu-kbh" id="9XG-8U-8qZ"/>
+                                            <outlet property="shareBtn" destination="v1G-dt-6xD" id="7ar-zU-z0M"/>
                                             <outlet property="stateProvinceLabel" destination="h6H-KE-xdX" id="m3W-by-u0D"/>
                                             <outlet property="webPagesTextView" destination="Kep-Ab-OX1" id="Icz-73-FrU"/>
                                         </connections>
@@ -267,7 +278,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

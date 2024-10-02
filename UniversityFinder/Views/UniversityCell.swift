@@ -10,6 +10,8 @@ import MapKit
 
 protocol UniversityCellDelegate: AnyObject {
     func didTapWebsite(url: URL)
+    func didTapShare(universityViewModel: UniversityViewModel)
+    
 }
 
 class UniversityCell: UITableViewCell {
@@ -24,6 +26,7 @@ class UniversityCell: UITableViewCell {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var detailViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var shareBtn: UIButton!
     weak var delegate: UniversityCellDelegate?
     private var universityViewModel: UniversityViewModel?
 
@@ -104,6 +107,10 @@ class UniversityCell: UITableViewCell {
                 tableView.endUpdates()
             }
         }
+    }
+    
+    @IBAction func shareBtnTapped(_ sender: Any) {
+        delegate?.didTapShare(universityViewModel: self.universityViewModel!)
     }
 }
 
